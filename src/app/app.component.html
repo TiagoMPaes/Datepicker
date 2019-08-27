@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" (dateChange)="DataSelecionada($event)" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+{{data}}
+<router-outlet></router-outlet>
