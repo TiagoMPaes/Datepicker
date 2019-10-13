@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-form-field>
-  <input matInput [matDatepicker]="picker" (dateChange)="DataSelecionada($event)" placeholder="Choose a date">
+  <input [formControl]="formControlData" (blur)="parseData()" maxlength="10" required matInput type="text" [(ngModel)]="test" (keypress)="mascaraCompetencia()">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
-{{data}}
+<input [formControl]="formControlInputOculto" matInput [matDatepicker]="picker" (dateChange)="DataSelecionada($event)" placeholder="Choose a date">
 <router-outlet></router-outlet>
